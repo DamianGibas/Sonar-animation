@@ -1,0 +1,56 @@
+
+body{
+  overflow: hidden;
+}
+.sonar-wrapper
+{
+position: relative;
+display: flex;
+align-items: center;
+overflow: hidden;
+height: 100vh;
+z-index: 0;
+}
+
+
+.sonar-emitter{
+  position: relative;
+  margin: 0 auto;
+  opacity: 60%;
+  
+}
+
+.sonar-wave{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: hsl(100, 56%, 50%);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+.sonar-wave{
+    animation: sonerwave 2.5s linear infinite;
+}
+
+.sonar-wave2{
+  animation: sonerwave 2.5s linear infinite 0.9s;
+}
+
+
+
+@keyframes sonerwave{
+  from{
+    opacity: 0.4;
+  }
+  to{
+    transform: scale(3);
+    opacity: 0;
+
+  }
+}
